@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Branding from "@/components/branding";
-import Body from "@/components/body";
+import { NextIntlClientProvider } from "next-intl";
+import Branding from "@/components/Branding";
+import Body from "@/components/Body";
 import { RootLayoutProps } from "@/types";
-import "./globals.css";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,9 @@ export default function RootLayout(props: Readonly<RootLayoutProps>) {
     <>
       <Branding />
       <html lang="en">
-        <Body {...props} />
+        <NextIntlClientProvider>
+          <Body {...props} />
+        </NextIntlClientProvider>
       </html>
     </>
   );

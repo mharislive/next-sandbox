@@ -1,5 +1,5 @@
-import BodyDefault from "./bodyDefault";
-import BodySite from "./bodySite";
+import BodyDefault from "./BodyDefault";
+import BodySite from "./BodySite";
 import { RootLayoutProps } from "@/types";
 import { DOMAINS } from "@/config";
 
